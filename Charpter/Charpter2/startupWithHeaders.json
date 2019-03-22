@@ -1,0 +1,25 @@
+[
+  {
+    "description": "模拟一个有headers的请求",
+    "request":{
+      "uri":"/post/with/headers",
+      "method":"post",
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      },
+      "json": {
+        "name": "huhansan4",
+        "sex": "woman"
+      }
+    },
+    "response":{
+      "json": {
+        "huhansan4": "你猜对了！",
+        "status": "4"
+      },
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      }
+    }
+  }
+]

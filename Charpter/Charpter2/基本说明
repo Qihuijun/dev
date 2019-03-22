@@ -1,0 +1,10 @@
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startup.json
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startupGet.json
+get带参数访问：http://localhost:8888/getdemo1?name=huahansan&age=18
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startupPost1.json
+post请求不能用浏览器，需要用Jmeter
+get带参数用queries属性，post带参数用forms属性
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startupWithCookies.json
+请求中用json格式，返回值中也需要用json格式返回
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startupWithHeaders.json
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startupWithRedirect.json
