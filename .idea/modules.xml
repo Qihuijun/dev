@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Charpter/Charpter.iml" filepath="$PROJECT_DIR$/Charpter/Charpter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Charpter/Charpter10/Charpter10.iml" filepath="$PROJECT_DIR$/Charpter/Charpter10/Charpter10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Charpter/Charpter11/Charpter11.iml" filepath="$PROJECT_DIR$/Charpter/Charpter11/Charpter11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Charpter/Charpter12/Charpter12.iml" filepath="$PROJECT_DIR$/Charpter/Charpter12/Charpter12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Charpter/Charpter13/Charpter13.iml" filepath="$PROJECT_DIR$/Charpter/Charpter13/Charpter13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Charpter/Charpter15/Charpter15.iml" filepath="$PROJECT_DIR$/Charpter/Charpter15/Charpter15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Charpter/Charpter3/Charpter3.iml" filepath="$PROJECT_DIR$/Charpter/Charpter3/Charpter3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Charpter7/Charpter7.iml" filepath="$PROJECT_DIR$/Charpter7/Charpter7.iml" />
+    </modules>
+  </component>
+</project>

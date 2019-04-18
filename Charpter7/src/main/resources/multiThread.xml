@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="thread" parallel="tests" thread-count="2">
+    <!--methods级别：所有用例都可在不同的线程下去执行
+    thread-count代表最大的线程数
+    parallel可以设置methods,classs,tests三个属性
+    xml文件配置这种方法不能指定线程池，只有方法才可以指定线程池-->
+    <test name="demo1">
+        <classes name="d1">
+            <class name="com.course.testng.multiThread.MultiThreadXml"></class>
+        </classes>
+    </test>
+    <test name="demo2">
+        <classes name="d2">
+            <class name="com.course.testng.multiThread.MultiThreadXml"></class>
+            <class name="com.course.testng.DependTest"></class>
+        </classes>
+    </test>
+</suite>

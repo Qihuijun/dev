@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.course.model">
+    <select id="login" parameterType="com.course.model.User" resultType="Integer">
+        select count(*) from user where username=#{username} and password=#{password};
+    </select>
+    <select id="getUserInfo" parameterType="com.course.model.User" resultType="com.course.model.User">
+        select * from user
+        --         判断where条件
+        <trim prefix="where" prefixOverrides="and">
+            <if test="null !=id and '' != id">
+                and id=#{id}
+            </if>
+            <if test="null !=username and '' != username">
+                and username=#{username}
+            </if>
+            <if test="null !=password and '' != password">
+                and password=#{password}
+            </if>
+            <if test="null !=sex and '' != sex">
+                and sex=#{sex}
+            </if>
+            <if test="null !=age and '' != age">
+                and age=#{age}
+            </if>
+            <if test="null !=permission and '' != permission">
+                and permission=#{permission}
+            </if>
+            <if test="null !=isDelete and '' != isDelete">
+                and isDelete=#{isDelete}
+            </if>
+        </trim>
+    </select>
+    <update id="updateUserInfo" parameterType="com.course.model.User">
+        UPDATE user set username=#{username}
+        where id=#{id}
+    </update>
+    <insert id="addUser" parameterType="com.course.model.User">
+        insert into user (username, password, age, sex, permission, isDelete)
+        values (#{username}, #{password}, #{age}, #{sex}, #{permission}, #{isDelete});
+    </insert>
+</mapper>

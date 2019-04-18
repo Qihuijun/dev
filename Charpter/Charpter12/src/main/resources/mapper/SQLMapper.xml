@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.course.model">
+    <!--登录接口测试case-->
+    <select id="loginCase" parameterType="Integer" resultType="com.course.model.loginCase">
+          select * from logincase where id=#{id};
+    </select>
+    <!--添加用户接口测试case-->
+    <select id="addUserCase" parameterType="Integer" resultType="com.course.model.addUserCase">
+          select * from addusercase where id=#{id};
+    </select>
+    <!--获取用户信息接口测试case-->
+    <select id="getUserInfoCase" parameterType="Integer" resultType="com.course.model.getUserInfocase">
+        select * from getuserinfo where id=#{id};
+    </select>
+    <!--获取用户信息列表接口测试case-->
+    <select id="getUserListCase" parameterType="String" resultType="com.course.model.getUserListCase">
+        select * from getuserlistcase where sex=#{sex};
+    </select>
+    <!--更新用户信息接口测试case-->
+    <select id="updateUserInfoCase" parameterType="String" resultType="com.course.model.updateUserInfoCase">
+        select * from updateuserinfocase where sex=#{sex};
+    </select>
+    <!--获取用户信息-->
+    <select id="getUserInfo" parameterType="com.course.model.getUserInfocase" resultType="com.course.model.User">
+        select * from user where 
+        id=#{userid};
+    </select>
+    <!--获取用户列表-->
+    <select id="getuserlist" parameterType="com.course.model.getUserListCase" resultType="com.course.model.User">
+        select * from user
+        <trim prefix="where" prefixOverrides="and">
+            <if test="null !=id and '' !=id">
+            and id=#{id}
+            </if>
+            <if test="null !=username and '' !=username">
+            and username=#{username}
+            </if>
+            <if test="null !=sex and '' !=sex">
+                and sex=#{sex}
+            </if>
+            <if test="null !=age and '' !=age">
+                and age=#{age}
+            </if>
+            <if test="null !=expected and '' !=expected">
+                and expected=#{expected}
+            </if>
+        </trim>
+    </select>
+    <!--添加用户-->
+    <select id="adduser" parameterType="com.course.model.addUserCase" resultType="com.course.model.User">
+        select * from user where
+        username = #{username}
+        and password=#{password}
+        and sex=#{sex}
+        and age=#{age}
+        and permission=#{permission}
+        and isDelete=#{isDelete}
+    </select>
+</mapper>
