@@ -1,0 +1,31 @@
+[
+  {
+    "discription": "将接口文档内容转化为json",
+    "request":{
+      "uri": "localhost:8888/v1/getUserList",
+      "method": "post",
+      "header": {},
+      "cookie": {},
+      "json": {
+        "username":"wangliu",
+        "password":"12345",
+        "age":"11",
+        "sex":"男",
+        "permission":"1",
+        "idDelete":"0",
+        "id":"7"
+      }
+    },
+    "response": {
+      "json": {
+        "username":"wangliu",
+        "password":"12345",
+        "age":"11",
+        "sex":"男",
+        "permission":"1",
+        "idDelete":"0",
+        "id":"7"
+      }
+    }
+  }
+]

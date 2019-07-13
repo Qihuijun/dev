@@ -22,7 +22,7 @@ public class MyGetMethod {
     public String getCookies(HttpServletResponse response){
 //httpServerRequest装请求信息类
 //        httpServerResponse装响应信息类
-        Cookie cookie = new Cookie("login","true1");
+        Cookie cookie = new Cookie("login","true");
         response.addCookie(cookie);
         return "恭喜你获得cookies信息成功！!!!";
     }
